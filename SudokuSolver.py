@@ -3,7 +3,7 @@ from numpy import rot90
 
 def sudoku(puzzle):
     # 405 is the grand total sum of the puzzle
-    while sum([sum(row) for row in puzzle]) != 405:
+    while sum([sum(row) for row in puzzle]) < 405:
         # reset these for each iteration otherwise older "missing values" persist
         row_missing_values = [[] for x in range(9)]
         col_missing_values = [[] for x in range(9)]
